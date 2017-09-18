@@ -190,7 +190,8 @@ class Cart extends Component
     {
         $sum = 0;
         foreach ($this->getItems($itemType) as $model) {
-            $sum += $model->{$attribute};
+            $qty = in_array("yii2mod\cart\models\CartQuantityItem", class_uses($model) ) ? $model->quantity : 1;
+            $sum += $model->{$attribute} * $qty;
         }
 
         return $sum;
