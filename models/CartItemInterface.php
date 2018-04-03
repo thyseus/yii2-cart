@@ -14,7 +14,7 @@ interface CartItemInterface
      *
      * @return int
      */
-    public function getPrice(): int;
+    public function getPrice();
 
     /**
      * Returns the label for the cart item (displayed in cart etc)
