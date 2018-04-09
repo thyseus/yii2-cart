@@ -11,7 +11,7 @@ namespace yii2mod\cart\models;
 
 trait CartQuantityItem
 {
-    public $quantity = 0;
+    public $quantity = 1;
 
     public function setQuantity($qty){
         $this->quantity = $qty;
